@@ -4,27 +4,15 @@ fullStackPyramid
 Getting Started
 ---------------
 
-- Change directory into your newly created project if not already there. Your
-  current directory should be the same as this README.txt file and setup.py.
+basically I just run either
 
-    cd fullStackPyramid
+- /helloWorld.py
+- /minimal.py
 
-- Create a Python virtual environment, if not already created.
+or in /backend:
 
-    python3 -m venv env
+- /backend/vue-page.py
+- /backend/nuxt3-page.py
 
-- Upgrade packaging tools, if necessary.
-
-    env/bin/pip install --upgrade pip setuptools
-
-- Install the project in editable mode with its testing requirements.
-
-    env/bin/pip install -e ".[testing]"
-
-- Run your project's tests.
-
-    env/bin/pytest
-
-- Run your project.
-
-    env/bin/pserve development.ini
+the last two will run through the install and build process, using npm and pnpm respectively, and hoist the files into a webpage at localhost:6543
+It also has a basic skeleton of backend request from frontend that I'm working on right now but this is an excellent starter for anyone that's interested.
