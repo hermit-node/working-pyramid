@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Welcome to the Home Page</h1>
+    <p>This is a simple HTML page served by Pyramid.</p>
+    <h3 id="response"></h3>
+    <button id="loadButton">Load File API</button>
+
+    <script>
+        document.getElementById('loadButton').addEventListener('click', function() {
+            fetch('/api/load_file')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('response').innerText = data.message;
+                })
+                .catch(error => console.error('Error fetching the API:', error));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit CSV</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Edit CSV File</h1>
+    <form action="/save?filename={{ filename }}" method="post">
+        <textarea name="data" rows="20" cols="100">{{ table|safe }}</textarea>
+        <input type="submit" value="Save" />
+    </form>
+</body>
+</html>
